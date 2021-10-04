@@ -64,8 +64,9 @@ namespace CompaniesClient
         private void DeleteCompany(Company companyToDelete)
         {
             DataAccess.DeleteCompany(companyToDelete.Id);
-            LoadData();
-            UpdateUi();
+            lstCompanies.Items.Remove(companyToDelete);
+            //LoadData();
+            //UpdateUi();
         }
 
         private void UpdateSelectedCompany(Company company)
@@ -104,6 +105,14 @@ namespace CompaniesClient
                 newCompany.Id = newId;
                 lstCompanies.Items.Add(newCompany);
                 UpdateUi();
+            }
+        }
+
+        private void lstCompanies_DoubleClick(object sender, EventArgs e)
+        {
+            if (lstCompanies.SelectedIndex !=-1)
+            {
+                EditSelectedCompany((Company)lstCompanies.SelectedItem);
             }
         }
     }
