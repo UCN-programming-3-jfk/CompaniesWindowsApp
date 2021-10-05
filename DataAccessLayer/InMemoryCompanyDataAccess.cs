@@ -6,7 +6,7 @@ namespace DataAccessLayer
 {
     public class InMemoryCompanyDataAccess : ICompanyDataAccess
     {
-        private static int nextId = 1;
+        private static int nextId = 0;
 
         private List<Company> companies = new List<Company>();
 

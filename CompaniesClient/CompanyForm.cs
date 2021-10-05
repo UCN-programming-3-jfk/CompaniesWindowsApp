@@ -1,24 +1,38 @@
 ﻿using CompaniesClient.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CompaniesClient
 {
     public partial class CompanyForm : Form
     {
+        #region Properties
         private Company company;
 
-        public Company Company { get => company; set { 
+        public Company Company
+        {
+            get => company; set
+            {
                 company = value;
                 CopyValuesFromCompanyObjectToControls();
-            } }
+            }
+        } 
+        #endregion
+
+
+        public CompanyForm(Company companyToEdit = null)
+        {
+            InitializeComponent();
+            //use the Company object if one was provided
+            //if it is NULL, create a new, blank, one
+            if (companyToEdit == null) { companyToEdit = new Company(); }
+            Company = companyToEdit;
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            CopyValuesFromControlsToCompanyObject();
+        }
 
         private void CopyValuesFromCompanyObjectToControls()
         {
@@ -29,20 +43,6 @@ namespace CompaniesClient
             txtCountry.Text = Company.Country;
             chkPublicCompany.Checked = Company.IsPublic;
         }
-
-        public CompanyForm(Company companyToEdit = null)
-        {
-            InitializeComponent();
-            Company = companyToEdit;
-        }
-
-        private void btnOk_Click(object sender, EventArgs e)
-        {
-            if (Company == null) { company = new Company(); }
-
-            CopyValuesFromControlsToCompanyObject();
-        }
-
         private void CopyValuesFromControlsToCompanyObject()
         {
             Company.Name = txtCompanyName.Text;

@@ -10,36 +10,36 @@ namespace CompanyRestService.Controllers
     public class CompaniesController : ControllerBase
     {
 
-        public ICompanyDataAccess DataAccess { get; set; }
+        private ICompanyDataAccess dataAccess;
 
         public CompaniesController(ICompanyDataAccess dataAccess)
         {
-            DataAccess = dataAccess;
+            this.dataAccess = dataAccess;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Company>> Get()
         {
-            return Ok(DataAccess.GetAll());
+            return Ok(dataAccess.GetAll());
         }
 
         [HttpPost]
         public ActionResult<int> Add(Company company)
         {
-            return Ok(DataAccess.AddCompany(company));
+            return Ok(dataAccess.AddCompany(company));
         }
 
         [HttpPut]
         public ActionResult<bool> Update(Company company)
         {
-            return Ok(DataAccess.UpdateCompany(company));
+            return Ok(dataAccess.UpdateCompany(company));
         }
 
         [HttpGet]
         [Route("{id}")]
         public ActionResult<Company> Get(int id)
         {
-            var company= DataAccess.GetCompanyById(id);
+            var company= dataAccess.GetCompanyById(id);
             if (company == null) { return NotFound(); }
             return Ok(company);
         }
@@ -48,7 +48,7 @@ namespace CompanyRestService.Controllers
         [Route("{id}")]
         public ActionResult<bool> Delete(int id)
         {
-            if (DataAccess.DeleteCompany(id))
+            if (dataAccess.DeleteCompany(id))
             {
                 return Ok();
             }
