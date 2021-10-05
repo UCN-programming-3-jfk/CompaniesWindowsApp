@@ -5,53 +5,29 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="DataAccess" Type="DataAccessLayer.ICompanyService">
+    <AssociationLine Name="dataAccess" Type="DataAccessLayer.ICompanyService">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.327" Y="0.118" />
+        <Position X="0.52" Y="0.088" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AEAAkAEAACEQAAAIAACAEAACIAAQAxEgAQABEIIAAUQ=</HashCode>
+      <HashCode>AEAAkAEAACEQAAAIAACAEAACIAAQAxEgAQAAEIIAAUQ=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="DataAccess" />
+      <Field Name="dataAccess" />
     </ShowAsAssociation>
   </Class>
   <Class Name="CompaniesClient.ServiceLayer.RestApiDataAccess">
-    <Position X="7.25" Y="0.5" Width="2.25" />
+    <Position X="8.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAgAAAAAAAAAAAAAAAAESQwAAAAAAAAA=</HashCode>
       <FileName>ServiceLayer\RestApiDataAccess.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CompaniesClient.DTO.Company">
-    <Position X="3.75" Y="5" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAACAAAAQAACIAAAAAAAAAAAAABAA=</HashCode>
-      <FileName>DTO\Company.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CompaniesClient.CompanyForm">
-    <Position X="7.75" Y="5" Width="3.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAEIAAACEAAAEACACAAAACIAAAFgAAAAQARAJAgAQ=</HashCode>
-      <FileName>CompanyForm.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Company" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="System.Windows.Forms.Form" Collapsed="true">
-    <Position X="10.75" Y="3.75" Width="1.5" />
-    <TypeIdentifier />
-  </Class>
   <Interface Name="DataAccessLayer.ICompanyService">
-    <Position X="4.75" Y="0.5" Width="2.25" />
+    <Position X="5.25" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAgAAAAAAAAAAAAAAAAECQgAAAAAAAAA=</HashCode>
       <FileName>ServiceLayer\ICompanyService.cs</FileName>
