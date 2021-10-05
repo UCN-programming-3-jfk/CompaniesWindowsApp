@@ -13,9 +13,12 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAEAAAACEAAAEACACAAAACIAAABgAAAAQAQAJAAAA=</HashCode>
+      <HashCode>AAAAEIAAACEAAAEACACAAAACIAAAFgAAAAQARAJAgAQ=</HashCode>
       <FileName>CompanyForm.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Company" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="System.Windows.Forms.Form" Collapsed="true">
     <Position X="1.75" Y="1" Width="3" />

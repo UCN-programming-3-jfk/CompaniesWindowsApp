@@ -8,12 +8,12 @@ namespace CompaniesClient
 {
     public partial class MainForm : Form
     {
-        public ICompanyService DataAccess { get; set; }
+        private ICompanyService dataAccess;
 
         public MainForm()
         {
             InitializeComponent();
-            DataAccess = new RestApiDataAccess("https://localhost:44317/api/v1/companies");
+            dataAccess = new RestApiDataAccess("https://localhost:44317/api/v1/companies");
         }
 
         #region Eventhandlers
@@ -50,7 +50,7 @@ namespace CompaniesClient
             try
             {
                 lstCompanies.Items.Clear();
-                foreach (var company in DataAccess.GetAll())
+                foreach (var company in dataAccess.GetAll())
                 {
                     lstCompanies.Items.Add(company);
                 }
@@ -85,7 +85,7 @@ namespace CompaniesClient
             {
                 try
                 {
-                    DataAccess.UpdateCompany(editorForm.Company);
+                    dataAccess.UpdateCompany(editorForm.Company);
                     //Hack
                     //  - to enable the text to update on the listitem
                     //    we set it to itself
@@ -106,7 +106,7 @@ namespace CompaniesClient
                 try
                 {
                     Company companyToDelete = (Company)lstCompanies.SelectedItem;
-                    DataAccess.DeleteCompany(companyToDelete.Id);
+                    dataAccess.DeleteCompany(companyToDelete.Id);
                     lstCompanies.Items.Remove(companyToDelete);
                 }
                 catch (Exception ex)
@@ -124,7 +124,7 @@ namespace CompaniesClient
                 var newCompany = editorForm.Company;
                 try
                 {
-                    int newId = DataAccess.AddCompany(newCompany);
+                    int newId = dataAccess.AddCompany(newCompany);
                     newCompany.Id = newId;
                     lstCompanies.Items.Add(newCompany);
                     UpdateUi();

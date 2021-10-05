@@ -19,7 +19,6 @@ namespace CompaniesClient
         } 
         #endregion
 
-
         public CompanyForm(Company companyToEdit = null)
         {
             InitializeComponent();
