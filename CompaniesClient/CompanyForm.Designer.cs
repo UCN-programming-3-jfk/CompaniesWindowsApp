@@ -45,11 +45,11 @@ namespace CompaniesClient
             // btnOk
             // 
             this.btnOk.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOk.Location = new System.Drawing.Point(405, 248);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.btnOk.Location = new System.Drawing.Point(482, 228);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(120, 50);
-            this.btnOk.TabIndex = 0;
+            this.btnOk.Size = new System.Drawing.Size(83, 33);
+            this.btnOk.TabIndex = 6;
             this.btnOk.Text = "&Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -57,105 +57,108 @@ namespace CompaniesClient
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(213, 248);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.btnCancel.Location = new System.Drawing.Point(379, 228);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(120, 50);
-            this.btnCancel.TabIndex = 0;
+            this.btnCancel.Size = new System.Drawing.Size(83, 33);
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // chkPublicCompany
             // 
             this.chkPublicCompany.AutoSize = true;
-            this.chkPublicCompany.Enabled = false;
-            this.chkPublicCompany.Location = new System.Drawing.Point(8, 201);
-            this.chkPublicCompany.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.chkPublicCompany.Location = new System.Drawing.Point(218, 195);
+            this.chkPublicCompany.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.chkPublicCompany.Name = "chkPublicCompany";
-            this.chkPublicCompany.Size = new System.Drawing.Size(112, 19);
-            this.chkPublicCompany.TabIndex = 6;
+            this.chkPublicCompany.Size = new System.Drawing.Size(136, 24);
+            this.chkPublicCompany.TabIndex = 4;
             this.chkPublicCompany.Text = "Public company";
             this.chkPublicCompany.UseVisualStyleBackColor = true;
             // 
             // lblYearlyEarningsInUsDollars
             // 
             this.lblYearlyEarningsInUsDollars.AutoSize = true;
-            this.lblYearlyEarningsInUsDollars.Location = new System.Drawing.Point(8, 156);
-            this.lblYearlyEarningsInUsDollars.Margin = new System.Windows.Forms.Padding(36, 0, 36, 0);
+            this.lblYearlyEarningsInUsDollars.Location = new System.Drawing.Point(10, 144);
+            this.lblYearlyEarningsInUsDollars.Margin = new System.Windows.Forms.Padding(45, 0, 45, 0);
             this.lblYearlyEarningsInUsDollars.Name = "lblYearlyEarningsInUsDollars";
-            this.lblYearlyEarningsInUsDollars.Size = new System.Drawing.Size(127, 15);
+            this.lblYearlyEarningsInUsDollars.Size = new System.Drawing.Size(160, 20);
             this.lblYearlyEarningsInUsDollars.TabIndex = 2;
             this.lblYearlyEarningsInUsDollars.Text = "Yearly earnings in USD:";
             // 
             // lblCountry
             // 
             this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(8, 107);
-            this.lblCountry.Margin = new System.Windows.Forms.Padding(36, 0, 36, 0);
+            this.lblCountry.Location = new System.Drawing.Point(10, 98);
+            this.lblCountry.Margin = new System.Windows.Forms.Padding(45, 0, 45, 0);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(56, 15);
+            this.lblCountry.Size = new System.Drawing.Size(67, 20);
             this.lblCountry.TabIndex = 3;
             this.lblCountry.Text = "Country: ";
             // 
             // lblNumberOfEmployees
             // 
             this.lblNumberOfEmployees.AutoSize = true;
-            this.lblNumberOfEmployees.Location = new System.Drawing.Point(8, 60);
-            this.lblNumberOfEmployees.Margin = new System.Windows.Forms.Padding(36, 0, 36, 0);
+            this.lblNumberOfEmployees.Location = new System.Drawing.Point(10, 51);
+            this.lblNumberOfEmployees.Margin = new System.Windows.Forms.Padding(45, 0, 45, 0);
             this.lblNumberOfEmployees.Name = "lblNumberOfEmployees";
-            this.lblNumberOfEmployees.Size = new System.Drawing.Size(128, 15);
+            this.lblNumberOfEmployees.Size = new System.Drawing.Size(160, 20);
             this.lblNumberOfEmployees.TabIndex = 4;
             this.lblNumberOfEmployees.Text = "Number of employees:";
             // 
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
-            this.lblCompanyName.Location = new System.Drawing.Point(8, 15);
-            this.lblCompanyName.Margin = new System.Windows.Forms.Padding(36, 0, 36, 0);
+            this.lblCompanyName.Location = new System.Drawing.Point(10, 18);
+            this.lblCompanyName.Margin = new System.Windows.Forms.Padding(45, 0, 45, 0);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(95, 15);
+            this.lblCompanyName.Size = new System.Drawing.Size(116, 20);
             this.lblCompanyName.TabIndex = 5;
             this.lblCompanyName.Text = "Company name:";
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(175, 7);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.txtCompanyName.Location = new System.Drawing.Point(218, 8);
+            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(400, 23);
-            this.txtCompanyName.TabIndex = 7;
+            this.txtCompanyName.Size = new System.Drawing.Size(347, 27);
+            this.txtCompanyName.TabIndex = 0;
             // 
             // txtNumberOfEmployees
             // 
-            this.txtNumberOfEmployees.Location = new System.Drawing.Point(175, 60);
-            this.txtNumberOfEmployees.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.txtNumberOfEmployees.Location = new System.Drawing.Point(218, 51);
+            this.txtNumberOfEmployees.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.txtNumberOfEmployees.Name = "txtNumberOfEmployees";
-            this.txtNumberOfEmployees.Size = new System.Drawing.Size(173, 23);
-            this.txtNumberOfEmployees.TabIndex = 7;
+            this.txtNumberOfEmployees.Size = new System.Drawing.Size(216, 27);
+            this.txtNumberOfEmployees.TabIndex = 1;
+            this.txtNumberOfEmployees.Text = "0";
+            this.txtNumberOfEmployees.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(175, 104);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.txtCountry.Location = new System.Drawing.Point(218, 94);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(173, 23);
-            this.txtCountry.TabIndex = 7;
+            this.txtCountry.Size = new System.Drawing.Size(216, 27);
+            this.txtCountry.TabIndex = 2;
             // 
             // txtYearlyEarningsInUsd
             // 
-            this.txtYearlyEarningsInUsd.Location = new System.Drawing.Point(175, 155);
-            this.txtYearlyEarningsInUsd.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.txtYearlyEarningsInUsd.Location = new System.Drawing.Point(218, 142);
+            this.txtYearlyEarningsInUsd.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.txtYearlyEarningsInUsd.Name = "txtYearlyEarningsInUsd";
-            this.txtYearlyEarningsInUsd.Size = new System.Drawing.Size(173, 23);
-            this.txtYearlyEarningsInUsd.TabIndex = 7;
+            this.txtYearlyEarningsInUsd.Size = new System.Drawing.Size(216, 27);
+            this.txtYearlyEarningsInUsd.TabIndex = 3;
+            this.txtYearlyEarningsInUsd.Text = "0";
+            this.txtYearlyEarningsInUsd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CompanyForm
             // 
             this.AcceptButton = this.btnOk;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(595, 314);
+            this.ClientSize = new System.Drawing.Size(592, 278);
             this.Controls.Add(this.txtYearlyEarningsInUsd);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtNumberOfEmployees);
@@ -168,7 +171,7 @@ namespace CompaniesClient
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(36, 14, 36, 14);
+            this.Margin = new System.Windows.Forms.Padding(45, 18, 45, 18);
             this.Name = "CompanyForm";
             this.Text = "Company editor";
             this.ResumeLayout(false);

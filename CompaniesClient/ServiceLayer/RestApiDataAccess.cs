@@ -1,15 +1,12 @@
-﻿using DataAccessLayer;
-using DataAccessLayer.Model;
+﻿using CompaniesClient.DTO;
+using DataAccessLayer;
 using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompaniesClient.ServiceLayer
 {
-    public class RestApiDataAccess : ICompanyDataAccess
+    public class RestApiDataAccess : ICompanyService
     {
         public string BaseUri { get; private set; }
 
