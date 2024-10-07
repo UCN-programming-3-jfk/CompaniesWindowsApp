@@ -1,4 +1,4 @@
-﻿using CompaniesClient.DTO;
+﻿using CompaniesClient.DAL.DTO;
 using System;
 using System.Windows.Forms;
 

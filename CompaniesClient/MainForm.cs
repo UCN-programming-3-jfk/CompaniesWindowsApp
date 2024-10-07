@@ -1,4 +1,4 @@
-﻿using CompaniesClient.DTO;
+﻿using CompaniesClient.DAL.DTO;
 using CompaniesClient.ServiceLayer;
 using DataAccessLayer;
 using System;
@@ -8,12 +8,12 @@ namespace CompaniesClient
 {
     public partial class MainForm : Form
     {
-        private ICompanyService dataAccess;
+        private ICompanyDAO dataAccess;
 
         public MainForm()
         {
             InitializeComponent();
-            dataAccess = new RestApiDataAccess("https://localhost:44317/api/v1/companies");
+            dataAccess = new RestApiCompanyDAO("https://localhost:44317/api/v1/companies");
         }
 
         #region Eventhandlers
@@ -85,7 +85,7 @@ namespace CompaniesClient
             {
                 try
                 {
-                    dataAccess.UpdateCompany(editorForm.Company);
+                    dataAccess.Update(editorForm.Company);
                     //Hack
                     //  - to enable the text to update on the listitem
                     //    we set it to itself
@@ -106,7 +106,7 @@ namespace CompaniesClient
                 try
                 {
                     Company companyToDelete = (Company)lstCompanies.SelectedItem;
-                    dataAccess.DeleteCompany(companyToDelete.Id);
+                    dataAccess.Delete(companyToDelete.Id);
                     lstCompanies.Items.Remove(companyToDelete);
                 }
                 catch (Exception ex)
@@ -124,7 +124,7 @@ namespace CompaniesClient
                 var newCompany = editorForm.Company;
                 try
                 {
-                    int newId = dataAccess.AddCompany(newCompany);
+                    int newId = dataAccess.Add(newCompany);
                     newCompany.Id = newId;
                     lstCompanies.Items.Add(newCompany);
                     UpdateUi();

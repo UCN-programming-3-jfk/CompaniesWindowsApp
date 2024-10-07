@@ -1,4 +1,4 @@
-﻿namespace CompaniesClient.DTO
+﻿namespace CompaniesClient.DAL.DTO
 {
     public class Company
     {
@@ -8,5 +8,6 @@
         public string Country { get; set; }
         public int YearlyEarningsInUSDollars { get; set; }
         public bool IsPublic { get; set; }
+
     }
 }
