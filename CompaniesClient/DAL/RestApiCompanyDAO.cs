@@ -21,13 +21,13 @@ public class RestApiCompanyDAO : ICompanyDAO
     {
         var request = new RestRequest();
         request.AddJsonBody(company);
-        return RestClient.Post<int>(request).Data;
+        return RestClient.Execute<int>(request, Method.Post).Data;
     }
 
     public bool Delete(int id)
     {
         var request = new RestRequest(id.ToString());
-        var response = RestClient.Delete<bool>(request);
+        var response = RestClient.Execute<bool>(request, Method.Delete);
 
         if (!response.IsSuccessful)
         {
@@ -55,7 +55,7 @@ public class RestApiCompanyDAO : ICompanyDAO
     {
         var request = new RestRequest();
         request.AddJsonBody(company);
-        var response = RestClient.Put<bool>(request);
+        var response = RestClient.Execute<bool>(request, Method.Put);
 
         if (!response.IsSuccessful)
         {
