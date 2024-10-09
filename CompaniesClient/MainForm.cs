@@ -9,12 +9,12 @@ namespace CompaniesClient;
 public partial class MainForm : Form
 {
     #region Variables and constructor
-    private ICompanyDAO dataAccess;
+    private ICompanyDAO _companyDAO;
 
     public MainForm()
     {
         InitializeComponent();
-        dataAccess = new RestApiCompanyDAO("https://localhost:44317/api/v1/companies");
+        _companyDAO = new RestApiCompanyDAO("https://localhost:44317/api/v1/companies");
     } 
     #endregion
 
@@ -37,7 +37,7 @@ public partial class MainForm : Form
         try
         {
             lstCompanies.Items.Clear();
-            foreach (var company in dataAccess.GetAll())
+            foreach (var company in _companyDAO.GetAll())
             {
                 lstCompanies.Items.Add(company);
             }
@@ -72,7 +72,7 @@ public partial class MainForm : Form
         {
             try
             {
-                dataAccess.Update(editorForm.Company);
+                _companyDAO.Update(editorForm.Company);
                 //Hack
                 //  - to enable the text to update on the listitem
                 //    we set it to itself
@@ -93,7 +93,7 @@ public partial class MainForm : Form
             try
             {
                 Company companyToDelete = (Company)lstCompanies.SelectedItem;
-                dataAccess.Delete(companyToDelete.Id);
+                _companyDAO.Delete(companyToDelete.Id);
                 lstCompanies.Items.Remove(companyToDelete);
             }
             catch (Exception ex)
@@ -111,7 +111,7 @@ public partial class MainForm : Form
             var newCompany = editorForm.Company;
             try
             {
-                int newId = dataAccess.Add(newCompany);
+                int newId = _companyDAO.Add(newCompany);
                 newCompany.Id = newId;
                 lstCompanies.Items.Add(newCompany);
                 UpdateUi();
